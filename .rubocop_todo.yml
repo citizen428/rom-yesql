@@ -12,7 +12,7 @@ Metrics/AbcSize:
 
 # Offense count: 4
 # Configuration parameters: AllowURI, URISchemes.
-Metrics/LineLength:
+Layout/LineLength:
   Max: 83
 
 # Offense count: 1

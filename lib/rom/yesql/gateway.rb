@@ -96,7 +96,7 @@ module ROM
       #
       # @api private
       def dataset?(_name)
-        ! @dataset.nil?
+        !@dataset.nil?
       end
 
       private

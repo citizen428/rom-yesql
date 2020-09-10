@@ -6,14 +6,14 @@ RSpec.describe ROM::Yesql::Gateway do
   it 'loads queries from file system when :path is provided' do
     gateway = ROM::Yesql::Gateway.new(uri, path: path)
 
-    expect(gateway.queries.keys).to match_array([:users, :tasks])
+    expect(gateway.queries.keys).to match_array(%i[users tasks])
   end
 
   it 'combines queries from :queries option and loaded from provided :path' do
     queries = { reports: { true: 'SELECT 1' } }
     gateway = ROM::Yesql::Gateway.new(uri, path: path, queries: queries)
 
-    expect(gateway.queries.keys).to match_array([:users, :tasks, :reports])
+    expect(gateway.queries.keys).to match_array(%i[users tasks reports])
   end
 
   it 'loads queries from :queries option' do

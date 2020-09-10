@@ -13,6 +13,5 @@ begin
       exec "bundle exec rubocop --auto-gen-config"
     end
   end
-
-rescue LoadError # rubocop:disable Lint/HandleExceptions
+rescue LoadError
 end

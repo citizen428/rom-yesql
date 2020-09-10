@@ -4,7 +4,7 @@ RSpec.shared_context 'database setup' do
   let!(:conn) { Sequel.connect(uri) }
 
   def drop_tables
-    [:users, :tasks].each { |name| conn.drop_table?(name) }
+    %i[users tasks].each { |name| conn.drop_table?(name) }
   end
 
   before do

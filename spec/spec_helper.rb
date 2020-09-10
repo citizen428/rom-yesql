@@ -20,7 +20,7 @@ require 'logger'
 
 begin
   require 'byebug'
-rescue LoadError # rubocop:disable Lint/HandleExceptions
+rescue LoadError
 end
 
 LOGGER = Logger.new(File.open('./log/test.log', 'a'))

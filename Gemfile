@@ -3,11 +3,11 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'inflecto'
-  gem 'rspec', '~> 3.5'
   gem 'codeclimate-test-reporter', require: false
-  gem 'sqlite3', platforms: [:mri, :rbx]
+  gem 'inflecto'
   gem 'jdbc-sqlite3', platforms: :jruby
+  gem 'rspec', '~> 3.5'
+  gem 'sqlite3', platforms: %i[mri rbx]
 end
 
 group :tools do
